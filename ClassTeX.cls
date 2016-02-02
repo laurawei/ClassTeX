@@ -1,15 +1,10 @@
-\NeedsTeXFormat{LaTeX2e}
+% Custom class for taking notes in LaTeX
 \ProvidesClass{TeXnote}
 
+% Package imports and setup
 \LoadClass{article}
-
 \RequirePackage{fancyhdr}
-\RequirePackage[usenames]{color}
-\RequirePackage{alltt}
 \RequirePackage[letterpaper,margin=1in]{geometry}
-\RequirePackage{parskip}
-\RequirePackage{xstring}
-\RequirePackage{comment}
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
 
@@ -17,18 +12,15 @@
 
 \renewcommand\@maketitle{
 	\begin{minipage}{.65\linewidth}
-	{\Huge
-			\@classname}
+	{\Huge\@classname}
 	\end{minipage}\begin{minipage}{.35\linewidth}
 	\shadowbox{\parbox{5cm}{
 	Notes taken by: \@notetaker\ \\ 
 	\@classnum, \@semester\ \\
 	Lecture Date: \@lecdate}}
-	\end{minipage}
-					 
+	\end{minipage}				 
 	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 	\vspace{-15pt}
-	\bigskip
 }
 
 
@@ -44,6 +36,10 @@
 \newcommand\lecdate[1]{\gdef\@lecdate{#1}}
 \newcommand\semester[1]{\gdef\@semester{#1}}
 \newcommand\classnum[1]{\gdef\@classnum{#1}}
+\newcommand\lectopic[1]{\gdef\@lectopic{#1}}
+
+%Optional commands for more specific things
+\gdef\@lectopic{Lecture Notes}
 
 %Commands for notes
 \newcommand\minornoteleft[2]{
@@ -61,34 +57,33 @@
 		\begin{minipage}{0.35\textwidth}
 			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
 		\end{minipage}
-			\vspace{-0.5cm}
+			\vspace{-0.4cm}
 	\end{wrapfigure}}
 		
 \newcommand\importantnote[2]{
-	\vspace{1cm}
+	\vspace{-0.5cm}
 	\begin{center}
 			\framebox{\parbox{\textwidth}{\normalsize \textbf{#1}\\#2}}
 	\end{center}
-	\vspace{1cm}}
+	\vspace{-0.4cm}}
 	
-	\newcommand\notepage[2]{
-		\begin{wrapfigure}{L}{0.35\textwidth}
-		\begin{minipage}{0.35\textwidth}
-			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
-		\end{minipage}
-		\end{wrapfigure}}
 
-
+%Error messages for required commands
 \gdef\@notetaker{\ClassError{AlgoPS}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
 \gdef\@classnum{\ClassError{TeXnote}{No \noexpand\classnum given. You must specify the number of the class (ex. CS 2XXX) using the command \noexpand\classnum{Class Number}}}
 \gdef\@lecdate{\ClassError{TeXnote}{No \noexpand\lecdate given.  You must specify the date of this lecture using the command \noexpand\lecdate{lecture date}}}
 \gdef\@semester{\ClassError{TeXnote}{No \noexpand \semester given.  You must specify the semester of this lecture (e.g. Spring 2014) using the command \noexpand\semester{Semester}}}
 \gdef\@classname{\ClassError{TeXnote}{No \noexpand \classname given.  You must specify the name of this class (e.g. Intro to Quantom Bogosort) using the command \noexpand\classname{Class Name}}}
+
+%Page setup
 \pagestyle{fancy}
 \fancyhf{}
+	\renewcommand\headrulewidth{0.3pt}
+	\renewcommand\footrulewidth{0.3pt}
 \lhead{\small{\@classnum}}
 \chead{\small{\@classname \ -- \@lecdate}}
-\rhead{\small{Lecture Notes}}
+\rhead{\small{\@lectopic}}
+\rfoot{\scriptsize{\thepage/\pageref{LastPage}}}
 \newlength{\oldleftmargini}
 
 
