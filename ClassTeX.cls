@@ -77,10 +77,10 @@
 	\vspace{-0.2cm}}
 		
 %%%%%%%%%%%% Error Messages for Required Commands %%%%%%%
-\gdef\@notetaker{\ClassError{AlgoPS}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
-\gdef\@classnum{\ClassError{TeXnote}{No \noexpand\classnum given. You must specify the number of the class (ex. CS 2XXX) using the command \noexpand\classnum{Class Number}}}
-\gdef\@lecdate{\ClassError{TeXnote}{No \noexpand\lecdate given.  You must specify the date of this lecture using the command \noexpand\lecdate{lecture date}}}
-\gdef\@classname{\ClassError{TeXnote}{No \noexpand \classname given.  You must specify the name of this class (e.g. Intro to Quantom Bogosort) using the command \noexpand\classname{Class Name}}}
+\gdef\@notetaker{\ClassError{ClassTeX}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
+\gdef\@classnum{\ClassError{ClassTeX}{No \noexpand\classnum given. You must specify the number of the class (ex. CS 2XXX) using the command \noexpand\classnum{Class Number}}}
+\gdef\@lecdate{\ClassError{ClassTeX}{No \noexpand\lecdate given.  You must specify the date of this lecture using the command \noexpand\lecdate{lecture date}}}
+\gdef\@classname{\ClassError{ClassTeX}{No \noexpand \classname given.  You must specify the name of this class (e.g. Intro to Quantom Bogosort) using the command \noexpand\classname{Class Name}}}
 
 %%%%%%%%%%%%% Page Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
