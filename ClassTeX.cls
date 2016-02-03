@@ -1,7 +1,8 @@
 % Custom class for taking notes in LaTeX
+\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ClassTeX}
 
-% Package imports and setup
+%%%%%%%%%%%%% Package Imports and Basic Setup %%%%%%%%%%%
 
 %Font option: comment out this line for traditional LaTeX font
 %Sans-serif used for a friendlier note-taking font
@@ -12,8 +13,7 @@
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
 
-%Header
-
+%%%%%%%%%%%%%%%%%% Header Setup %%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\@maketitle{
 	\begin{minipage}{.65\linewidth}
 		{\Huge\@classname}
@@ -27,8 +27,7 @@
 \vspace{-15pt}
 }
 
-
-%Setup
+%%%%%%%%%%%%%%%% Commands and Variable Setup %%%%%%%%%%%%
 
 \fancypagestyle{plain}{\fancyhead{}
 	\renewcommand\headrulewidth{0pt}
@@ -49,7 +48,7 @@
 \gdef\@lectopic{Lecture Notes}
 \gdef\@semester{}
 
-%Commands for notes
+%%%%%%%%%%%%%% Note Box Command Setup %%%%%%%%%%%%%%%%%%%
 \newcommand\minornoteleft[2]{
 	\begin{wrapfigure}{l}{0.35\textwidth}
 		\vspace{-0.5cm}
@@ -75,14 +74,14 @@
 	\end{center}
 	\vspace{-0.2cm}}
 		
-		
-%Error messages for required commands
+%%%%%%%%%%%% Error Messages for Required Commands %%%%%%%
 \gdef\@notetaker{\ClassError{AlgoPS}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
 \gdef\@classnum{\ClassError{TeXnote}{No \noexpand\classnum given. You must specify the number of the class (ex. CS 2XXX) using the command \noexpand\classnum{Class Number}}}
 \gdef\@lecdate{\ClassError{TeXnote}{No \noexpand\lecdate given.  You must specify the date of this lecture using the command \noexpand\lecdate{lecture date}}}
 \gdef\@classname{\ClassError{TeXnote}{No \noexpand \classname given.  You must specify the name of this class (e.g. Intro to Quantom Bogosort) using the command \noexpand\classname{Class Name}}}
 
-%Page setup
+%%%%%%%%%%%%% Page Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand\headrulewidth{0.3pt}
@@ -92,7 +91,7 @@
 \rhead{\small{\@lectopic}}
 \rfoot{\scriptsize{\thepage/\pageref{LastPage}}}
 \newlength{\oldleftmargini}
-
-
 \AtEndDocument{\label{LastPage}}
+
+
 		
