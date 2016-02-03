@@ -1,5 +1,5 @@
 % Custom class for taking notes in LaTeX
-\ProvidesClass{TeXnote}
+\ProvidesClass{ClassTeX}
 
 % Package imports and setup
 
