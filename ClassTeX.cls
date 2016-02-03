@@ -59,40 +59,40 @@
 		\vspace{-0.4cm}
 	\end{wrapfigure}}
 	
-	\newcommand\minornoteright[2]{
-		\begin{wrapfigure}{r}{0.35\textwidth}
-			\vspace{-0.5cm}
-			\begin{minipage}{0.35\textwidth}
-				\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
-			\end{minipage}
-			\vspace{-0.4cm}
-		\end{wrapfigure}}
-		
-		\newcommand\importantnote[2]{
-			\vspace{-0.5cm}
-			\begin{center}
-				\framebox{\parbox{\textwidth}{\normalsize \textbf{#1}\\#2}}
-			\end{center}
-			\vspace{-0.2cm}}
-		
-		
-		%Error messages for required commands
-		\gdef\@notetaker{\ClassError{AlgoPS}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
-		\gdef\@classnum{\ClassError{TeXnote}{No \noexpand\classnum given. You must specify the number of the class (ex. CS 2XXX) using the command \noexpand\classnum{Class Number}}}
-		\gdef\@lecdate{\ClassError{TeXnote}{No \noexpand\lecdate given.  You must specify the date of this lecture using the command \noexpand\lecdate{lecture date}}}
-		\gdef\@classname{\ClassError{TeXnote}{No \noexpand \classname given.  You must specify the name of this class (e.g. Intro to Quantom Bogosort) using the command \noexpand\classname{Class Name}}}
-		
-		%Page setup
-		\pagestyle{fancy}
-		\fancyhf{}
-		\renewcommand\headrulewidth{0.3pt}
-		\renewcommand\footrulewidth{0.3pt}
-		\lhead{\small{\@classnum}}
-		\chead{\small{\@classname \ -- \@lecdate}}
-		\rhead{\small{\@lectopic}}
-		\rfoot{\scriptsize{\thepage/\pageref{LastPage}}}
-		\newlength{\oldleftmargini}
+\newcommand\minornoteright[2]{
+	\begin{wrapfigure}{r}{0.35\textwidth}
+		\vspace{-0.5cm}
+		\begin{minipage}{0.35\textwidth}
+			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
+		\end{minipage}
+		\vspace{-0.4cm}
+	\end{wrapfigure}}
+	
+\newcommand\importantnote[2]{
+	\vspace{-0.5cm}
+	\begin{center}
+		\framebox{\parbox{\textwidth}{\normalsize \textbf{#1}\\#2}}
+	\end{center}
+	\vspace{-0.2cm}}
 		
 		
-		\AtEndDocument{\label{LastPage}}
+%Error messages for required commands
+\gdef\@notetaker{\ClassError{AlgoPS}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
+\gdef\@classnum{\ClassError{TeXnote}{No \noexpand\classnum given. You must specify the number of the class (ex. CS 2XXX) using the command \noexpand\classnum{Class Number}}}
+\gdef\@lecdate{\ClassError{TeXnote}{No \noexpand\lecdate given.  You must specify the date of this lecture using the command \noexpand\lecdate{lecture date}}}
+\gdef\@classname{\ClassError{TeXnote}{No \noexpand \classname given.  You must specify the name of this class (e.g. Intro to Quantom Bogosort) using the command \noexpand\classname{Class Name}}}
+
+%Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0.3pt}
+\renewcommand\footrulewidth{0.3pt}
+\lhead{\small{\@classnum}}
+\chead{\small{\@classname \ -- \@lecdate}}
+\rhead{\small{\@lectopic}}
+\rfoot{\scriptsize{\thepage/\pageref{LastPage}}}
+\newlength{\oldleftmargini}
+
+
+\AtEndDocument{\label{LastPage}}
 		
