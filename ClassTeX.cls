@@ -32,7 +32,7 @@
 \fancypagestyle{plain}{\fancyhead{}
 	\renewcommand\headrulewidth{0pt}
 	\renewcommand\footrulewidth{0.3pt}
-	\rfoot{\scriptsize{\thepage/\pageref{LastPage}}}}
+	\rfoot{\scriptsize{\thepage/\pageref{LastPage}}}\lfoot{\small{\@univ}}}
 
 \newcommand\notetaker[1]{\gdef\@notetaker{#1}}
 \newcommand\classname[1]{\gdef\@classname{#1}}
@@ -40,6 +40,7 @@
 \newcommand\semester[1]{\gdef\@semester{, #1}}
 \newcommand\classnum[1]{\gdef\@classnum{#1}}
 \newcommand\lectopic[1]{\gdef\@lectopic{#1}}
+\newcommand\univ[1]{\gdef\@univ{#1}}
 
 %Command for the ClassTeX "logo"
 \newcommand{\ClassTeX}{Class\TeX}
@@ -47,6 +48,7 @@
 %Optional commands for more specific things
 \gdef\@lectopic{Lecture Notes}
 \gdef\@semester{}
+\gdef\@univ{}
 
 %%%%%%%%%%%%%% Note Box Command Setup %%%%%%%%%%%%%%%%%%%
 \newcommand\minornoteleft[2]{
@@ -90,6 +92,7 @@
 \chead{\small{\@classname \ -- \@lecdate}}
 \rhead{\small{\@lectopic}}
 \rfoot{\scriptsize{\thepage/\pageref{LastPage}}}
+\lfoot{\small{\@univ}}
 \newlength{\oldleftmargini}
 \AtEndDocument{\label{LastPage}}
 
