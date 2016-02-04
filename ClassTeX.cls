@@ -5,13 +5,18 @@
 %%%%%%%%%%%%% Package Imports and Basic Setup %%%%%%%%%%%
 
 %Font option: comment out this line for traditional LaTeX font
-%Sans-serif used for a friendlier note-taking font
-\renewcommand{\familydefault}{\sfdefault}
+%Sans-serif used for a friendlier note-taking font by default.
+%Optional command \tradstyle at beginning of document to enable
+%traditional LaTeX style.
+\gdef\@notestyle{\sfdefault}
+\renewcommand{\familydefault}{\@notestyle}
 \LoadClass{article}
 \RequirePackage{fancyhdr}
 \RequirePackage[letterpaper,margin=1in]{geometry}
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
+
+\newcommand{\tradstyle}{\gdef\@notestyle{textnormal}}
 
 %%%%%%%%%%%%%%%%%% Header Setup %%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\@maketitle{
