@@ -1,4 +1,4 @@
-###ClassTeX
+##ClassTeX
 
 Simple LaTeX class for writing taking notes.  Features premade text box commands and a clean header.
 
