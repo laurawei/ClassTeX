@@ -18,15 +18,24 @@
 
 \newcommand{\tradstyle}{\gdef\@notestyle{textnormal}}
 
+
+
+%%%%%%%%%% Default Note Header Values %%%%%%%%%%%%%%%%%%%
+\gdef\@namecaption{Notes taken by: }
+\gdef\@datecaption{Lecture Date: }
+
+%%%%%%%%%%%%% HW Mode Header Values %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hwmode}{\gdef\@namecaption{}  \gdef\@datecaption{}}
+
 %%%%%%%%%%%%%%%%%% Header Setup %%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\@maketitle{
 	\begin{minipage}{.65\linewidth}
 		{\Huge\@classname}
 	\end{minipage}\begin{minipage}{.35\linewidth}
 	\shadowbox{\parbox{5cm}{
-			Notes taken by: \@notetaker\ \\ 
+			\@namecaption \@notetaker\ \\ 
 			\@classnum\@semester\ \\
-			Lecture Date: \@lecdate}}
+			\@datecaption \@lecdate}}
 \end{minipage}				 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-15pt}
