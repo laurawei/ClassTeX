@@ -38,14 +38,13 @@
 	\subsection{Examples and Usage}
 	\minornoteleft{Minor Note Left}{\texttt{$\backslash$minornoteleft} is useful for important pointers.  The first argument is the title of the note, in bold, and the second argument is the note itself.} 
 		
-	Note boxes are the main feature of \ClassTeX.  During lectures, there are often remarks made in passing that a student might wish to take note of and remember -- small concepts, tips, and other things that might be helpful in the future.  \ClassTeX\ includes commands to allow for the easy addition of these blurbs into any set of notes.\\
-	\minornoteright{Minor Note Right}{\texttt{$\backslash$minornoteright} Identical formatting but on the right side.} 
-
-	To use the note boxes, simply use the command before the section relative to which you are aligning the note box.  Although this is a planned fix in a future update, the current template requires note boxes to be written prior to the text which is to be wrapped around them.  See the note on the next page, or check out the source for more info.\\
+	Note boxes are the main feature of \ClassTeX.  During lectures, there are often remarks made in passing that a student might wish to take note of and remember -- small concepts, tips, and other things that might be helpful in the future.  \ClassTeX\ includes commands to allow for the easy addition of these blurbs into any set of notes.
+	\minornoteright{Minor Note Right}{\texttt{$\backslash$minornoteright} Identical formatting but on the right side.}
 	
+	To use the note boxes, simply use the command before the section relative to which you are aligning the note box.  Although this is a planned fix in a future update, the current template requires note boxes to be written prior to the text which is to be wrapped around them.  See the note on the next page, or check out the source for more info.
 	\importantnote{Important Note}{\texttt{$\backslash$importantnote} Takes the same arguments as the minor notes, but these are boxes which take up the whole page -- this command is designed for more important main points that need to be remembered.}
-	
 	\subsection{Known Issues}
+	
 	\minornoteleft{Box Placement}{Boxes are "inserted" with text wrap based on where you write the box in the source code, so you might need to add or remove line breaks to clean up the appearance.}
 	
 	Note boxes \textbf{do not} automatically avoid each other.  If you find that a note box overlaps with another, simply add line breaks until they no longer overlap.  (This might potentially be fixed in a future update).

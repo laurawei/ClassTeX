@@ -15,8 +15,10 @@
 \RequirePackage[letterpaper,margin=1in]{geometry}
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
+\RequirePackage{parskip}
+\RequirePackage[document]{ragged2e}
 
-\newcommand{\tradstyle}{\gdef\@notestyle{textnormal}}
+\newcommand{\tradstyle}{\gdef\@notestyle{\rmdefault}}
 
 
 
@@ -36,9 +38,10 @@
 			\@namecaption \@notetaker\ \\ 
 			\@classnum\@semester\ \\
 			\@datecaption \@lecdate}}
-\end{minipage}				 
+\end{minipage}
+				 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
-\vspace{-15pt}
+%\vspace{-15pt}
 }
 
 %%%%%%%%%%%%%%%% Commands and Variable Setup %%%%%%%%%%%%
@@ -67,7 +70,7 @@
 %%%%%%%%%%%%%% Note Box Command Setup %%%%%%%%%%%%%%%%%%%
 \newcommand\minornoteleft[2]{
 	\begin{wrapfigure}{l}{0.35\textwidth}
-		\vspace{-0.5cm}
+		\vspace{-0.2cm}
 		\begin{minipage}{0.35\textwidth}
 			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
 		\end{minipage}
@@ -76,7 +79,7 @@
 	
 \newcommand\minornoteright[2]{
 	\begin{wrapfigure}{r}{0.35\textwidth}
-		\vspace{-0.5cm}
+		\vspace{-0.2cm}
 		\begin{minipage}{0.35\textwidth}
 			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
 		\end{minipage}
@@ -84,11 +87,12 @@
 	\end{wrapfigure}}
 	
 \newcommand\importantnote[2]{
-	\vspace{-0.5cm}
+	\vspace{-0.2cm}
 	\begin{center}
-		\framebox{\parbox{\textwidth}{\normalsize \textbf{#1}\\#2}}
+		\framebox{\parbox{\linewidth}{\normalsize \textbf{#1}\\#2}}
 	\end{center}
-	\vspace{-0.2cm}}
+	%\vspace{-0.2cm}
+	}
 		
 %%%%%%%%%%%% Error Messages for Required Commands %%%%%%%
 \gdef\@notetaker{\ClassError{ClassTeX}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
