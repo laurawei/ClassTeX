@@ -70,24 +70,24 @@
 %%%%%%%%%%%%%% Note Box Command Setup %%%%%%%%%%%%%%%%%%%
 \newcommand\minornoteleft[2]{
 	\begin{wrapfigure}{l}{0.35\textwidth}
-		\vspace{-0.2cm}
+		\vspace{-0.5cm}
 		\begin{minipage}{0.35\textwidth}
 			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
 		\end{minipage}
-		\vspace{-0.4cm}
+		\vspace{-0.5cm}
 	\end{wrapfigure}}
 	
 \newcommand\minornoteright[2]{
-	\begin{wrapfigure}{r}{0.35\textwidth}
-		\vspace{-0.2cm}
-		\begin{minipage}{0.35\textwidth}
+	\begin{wrapfigure}{R}{0.35\textwidth}
+		\vspace{-0.5cm}
+		\begin{minipage}{0.35\linewidth}
 			\framebox{\parbox{5cm}{\normalsize \textbf{#1}\\#2}}
 		\end{minipage}
-		\vspace{-0.4cm}
+		\vspace{-0.5cm}
 	\end{wrapfigure}}
 	
 \newcommand\importantnote[2]{
-	\vspace{-0.2cm}
+	%\vspace{-0.2cm}
 	\begin{center}
 		\framebox{\parbox{\linewidth}{\normalsize \textbf{#1}\\#2}}
 	\end{center}
