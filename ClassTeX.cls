@@ -16,7 +16,7 @@
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
 
-\newcommand{\tradstyle}{\gdef\@notestyle{textnormal}}
+\newcommand{\tradstyle}{\gdef\@notestyle{\rmdefault}}
 
 
 
