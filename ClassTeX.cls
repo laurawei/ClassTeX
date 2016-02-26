@@ -15,7 +15,8 @@
 \RequirePackage[letterpaper,margin=1in]{geometry}
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
-
+\RequirePackage{ragged2e}
+\RaggedRight
 \newcommand{\tradstyle}{\gdef\@notestyle{\rmdefault}}
 
 
