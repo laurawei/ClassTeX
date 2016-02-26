@@ -39,6 +39,7 @@
 \end{minipage}				 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-15pt}
+\bigskip
 }
 
 %%%%%%%%%%%%%%%% Commands and Variable Setup %%%%%%%%%%%%
@@ -63,6 +64,18 @@
 \gdef\@lectopic{Lecture Notes}
 \gdef\@semester{}
 \gdef\@univ{}
+
+%%%%%%%%%%%%%%% Proof and Section shortcuts%%%%%%%%%%%%%%
+
+\newcommand\proof{\textbf{Proof: }}
+\newcommand\analysis{\textbf{Analysis: }}
+\newcommand\basecase{\emph{Base Case: }}
+\newcommand\inductivestep{\emph{Inductive Step: }}
+\newcommand\ih{\emph{Inductive Hypothesis: }}
+\newcommand\runtimeproof{\textbf{Proof of Runtime: }}
+\newcommand\correctnessproof{\textbf{Proof of Correctness: }}
+
+
 
 %%%%%%%%%%%%%% Note Box Command Setup %%%%%%%%%%%%%%%%%%%
 \newcommand\minornoteleft[2]{
