@@ -16,6 +16,7 @@
 \RequirePackage{wrapfig}
 \RequirePackage{fancybox}
 \RequirePackage{ragged2e}
+\RequirePackage{mathtools}
 \RaggedRight
 \newcommand{\tradstyle}{\gdef\@notestyle{\rmdefault}}
 
@@ -37,6 +38,7 @@
 			\@namecaption \@notetaker\ \\ 
 			\@classnum\@semester\ \\
 			\@datecaption \@lecdate}}
+	\vspace{10pt}
 \end{minipage}				 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-15pt}
@@ -68,13 +70,19 @@
 
 %%%%%%%%%%%%%%% Proof and Section shortcuts%%%%%%%%%%%%%%
 
-\newcommand\proof{\textbf{Proof: }}
-\newcommand\analysis{\textbf{Analysis: }}
-\newcommand\basecase{\emph{Base Case: }}
-\newcommand\inductivestep{\emph{Inductive Step: }}
-\newcommand\ih{\emph{Inductive Hypothesis: }}
-\newcommand\runtimeproof{\textbf{Proof of Runtime: }}
-\newcommand\correctnessproof{\textbf{Proof of Correctness: }}
+\newcommand\proof[0]{\textbf{Proof: }}
+\newcommand\analysis[0]{\textbf{Analysis: }}
+\newcommand\basecase[0]{\emph{Base Case: }}
+\newcommand\inductivestep[0]{\emph{Inductive Step: }}
+\newcommand\ih[0]{\emph{Inductive Hypothesis: }}
+\newcommand\runtimeproof[0]{\textbf{Proof of Runtime: }}
+\newcommand\correctnessproof[0]{\textbf{Proof of Correctness: }}
+\newcommand\secbr[0]{\vspace{0.4cm}\\}
+\newcommand\question[0]{\textbf{Question: }}
+\newcommand\answer[0]{\textbf{Answer: }}
+\newcommand\claim[0]{\textbf{Claim: }}
+\newcommand\qa[2]{\textbf{Question: }#1 \\ \vspace{0.3cm} \textbf{Answer: }#2 \vspace{0.3cm}}
+\newcommand\divline[0]{\\ \noindent\rule{\linewidth}{0.4pt}\\}
 
 
 
@@ -98,11 +106,11 @@
 	\end{wrapfigure}}
 	
 \newcommand\importantnote[2]{
-	\vspace{-0.5cm}
+	\vspace{-0.4cm}
 	\begin{center}
 		\framebox{\parbox{\textwidth}{\normalsize \textbf{#1}\\#2}}
 	\end{center}
-	\vspace{-0.2cm}}
+	\vspace{-0.0cm}}
 		
 %%%%%%%%%%%% Error Messages for Required Commands %%%%%%%
 \gdef\@notetaker{\ClassError{ClassTeX}{No \noexpand\notetaker given. You must specify your name using the command \noexpand\notetaker{your name}}}
