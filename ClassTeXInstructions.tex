@@ -39,7 +39,6 @@
 	\minornoteleft{Minor Note Left}{\texttt{$\backslash$minornoteleft} is useful for important pointers.  The first argument is the title of the note, in bold, and the second argument is the note itself.} 
 		
 	Note boxes are the main feature of \ClassTeX.  During lectures, there are often remarks made in passing that a student might wish to take note of and remember -- small concepts, tips, and other things that might be helpful in the future.  \ClassTeX\ includes commands to allow for the easy addition of these blurbs into any set of notes.\\
-	\minornoteright{Minor Note Right}{\texttt{$\backslash$minornoteright} Identical formatting but on the right side.} 
 
 	To use the note boxes, simply use the command before the section relative to which you are aligning the note box.  Although this is a planned fix in a future update, the current template requires note boxes to be written prior to the text which is to be wrapped around them.  See the note on the next page, or check out the source for more info.\\
 	
@@ -52,6 +51,7 @@
 	\minornoteright{Box Properties,\\Box Titles}{The width of the box is limited by design.  Titles can be made multiline to avoid this!}
 	
 	The \texttt{minornoteright} command does not align to the right unless there is text to the left of it.  This is a consequence of the design of the template, but may also be modified in a future update and is listed as a known issue for this reason.
+	\importantnote{Minor Note Right}{\texttt{$\backslash$minornoteright} Identical formatting but on the right side.  Use at your own risk - this command is currently awaiting bugfix.} 
 	
 	\ClassTeX\ note blocks do not interact well with environments that create huge blocks of space, such as \texttt{itemize} or \texttt{enumerate}.  If you wish to insert a note block near one of these environment, you will need to insert it before or after the environment is created.
 	\section{Additional Info}
