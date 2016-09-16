@@ -68,7 +68,7 @@
 \gdef\@semester{}
 \gdef\@univ{}
 
-%%%%%%%%%%%%%%% Proof and Section shortcuts%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Proof, Section, Math shortcuts%%%%%%%%%%%%%%
 
 \newcommand\proof[0]{\textbf{Proof: }}
 \newcommand\analysis[0]{\textbf{Analysis: }}
@@ -83,6 +83,10 @@
 \newcommand\claim[0]{\textbf{Claim: }}
 \newcommand\qa[2]{\textbf{Question: }#1 \\ \vspace{0.3cm} \textbf{Answer: }#2 \vspace{0.3cm}}
 \newcommand\divline[0]{\\ \noindent\rule{\linewidth}{0.4pt}\\}
+
+%Note: Assumes math environment
+\newcommand\ddx[0]{\frac{d}{dx}}
+\newcommand\pdev[0]{\frac{\delta}{\delta x}}
 
 
 
