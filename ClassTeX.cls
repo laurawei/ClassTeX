@@ -88,6 +88,11 @@
 \newcommand\ddx[0]{\frac{d}{dx}}
 \newcommand\pdev[0]{\frac{\delta}{\delta x}}
 
+% Probability text commands (also math mode only)
+\newcommand\var[0]{\text{Var}}
+\newcommand\prob[0]{\text{Prob}}
+\newcommand\cov[0]{\text{Cov}}
+
 
 
 %%%%%%%%%%%%%% Note Box Command Setup %%%%%%%%%%%%%%%%%%%
