@@ -17,6 +17,7 @@
 \RequirePackage{fancybox}
 \RequirePackage{ragged2e}
 \RequirePackage{mathtools}
+\RequirePackage{amssymb}
 \RaggedRight
 \newcommand{\tradstyle}{\gdef\@notestyle{\rmdefault}}
 
@@ -83,6 +84,7 @@
 \newcommand\claim[0]{\textbf{Claim: }}
 \newcommand\qa[2]{\textbf{Question: }#1 \\ \vspace{0.3cm} \textbf{Answer: }#2 \vspace{0.3cm}}
 \newcommand\divline[0]{\\ \noindent\rule{\linewidth}{0.4pt}\\}
+\newcommand\qed[0]{$\blacksquare$}
 
 %Note: Assumes math environment
 \newcommand\ddx[0]{\frac{d}{dx}}
@@ -92,6 +94,7 @@
 \newcommand\var[0]{\text{Var}}
 \newcommand\prob[0]{\text{Prob}}
 \newcommand\cov[0]{\text{Cov}}
+\newcommand\sd[0]{\text{SD}}
 
 
 
